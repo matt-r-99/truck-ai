@@ -6,10 +6,23 @@ import time
 def run():
     listings = scrape_craigslist()
 
-    for listing in listings[:5]:
+    results = = []
+    
+    for listing in listings[:10]: #keep light for cloud limits
         result = score_listing(listing)
+
+        results.append ({
+            "title": listing["title"],
+            "result": result
+        })
         print(listing["title"])
         print(result)
+        print ("---")
+
+    return results
+
+    if __name__ == "__main__":
+        run()
         print("-----")
 
 while True:
