@@ -6,7 +6,7 @@ import time
 def run():
     listings = scrape_craigslist()
 
-    results = = []
+    results = []
     
     for listing in listings[:10]: #keep light for cloud limits
         result = score_listing(listing)
